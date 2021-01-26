@@ -1,0 +1,28 @@
+{
+  "name": "shamsi",
+  "version": "0.1.0",
+  "description": "A Jalali to Gregorian converter with no dependency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msdit/shamsi.git"
+  },
+  "keywords": [
+    "jalaali",
+    "jalali",
+    "persian",
+    "khorshidi",
+    "shamsi",
+    "calendar",
+    "date"
+  ],
+  "author": "Masoud Aghaei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msdit/shamsi/issues"
+  },
+  "homepage": "https://github.com/msdit/shamsi"
+}

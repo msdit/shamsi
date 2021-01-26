@@ -4,8 +4,8 @@
 1461=(365*4)+(4/4) & 146097=(365*400)+(400/4)-(400/100)+(400/400)  */
 
 function gregorianToJalali(gy, gm, gd) {
-  var g_d_m, jy, jm, jd, gy2, days;
-  g_d_m = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+  var gdm, jy, jm, jd, gy2, days;
+  gdm = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
   gy2 = gm > 2 ? gy + 1 : gy;
   days =
     355666 +
@@ -14,7 +14,7 @@ function gregorianToJalali(gy, gm, gd) {
     ~~((gy2 + 99) / 100) +
     ~~((gy2 + 399) / 400) +
     gd +
-    g_d_m[gm - 1];
+    gdm[gm - 1];
   jy = -1595 + 33 * ~~(days / 12053);
   days %= 12053;
   jy += 4 * ~~(days / 1461);
@@ -35,7 +35,7 @@ function gregorianToJalali(gy, gm, gd) {
 exports.gregorianToJalali = gregorianToJalali;
 
 function jalaliToGregorian(jy, jm, jd) {
-  var sal_a, gy, gm, gd, days;
+  var salA, gy, gm, gd, days;
   jy += 1595;
   days =
     -355668 +
@@ -49,7 +49,9 @@ function jalaliToGregorian(jy, jm, jd) {
   if (days > 36524) {
     gy += 100 * ~~(--days / 36524);
     days %= 36524;
-    if (days >= 365) days++;
+    if (days >= 365) {
+      days++;
+    }
   }
   gy += 4 * ~~(days / 1461);
   days %= 1461;
@@ -58,7 +60,7 @@ function jalaliToGregorian(jy, jm, jd) {
     days = (days - 1) % 365;
   }
   gd = days + 1;
-  sal_a = [
+  salA = [
     0,
     31,
     (gy % 4 === 0 && gy % 100 !== 0) || gy % 400 === 0 ? 29 : 28,
@@ -73,7 +75,9 @@ function jalaliToGregorian(jy, jm, jd) {
     30,
     31,
   ];
-  for (gm = 0; gm < 13 && gd > sal_a[gm]; gm++) gd -= sal_a[gm];
+  for (gm = 0; gm < 13 && gd > salA[gm]; gm++) {
+    gd -= salA[gm];
+  }
   return [gy, gm, gd];
 }
 exports.jalaliToGregorian = jalaliToGregorian;

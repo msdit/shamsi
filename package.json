@@ -13,11 +13,15 @@
   "keywords": [
     "jalaali",
     "jalali",
+    "miladi",
+    "convert",
     "persian",
     "khorshidi",
     "shamsi",
     "calendar",
-    "date"
+    "date",
+    "time",
+    "javascript"
   ],
   "author": "Masoud Aghaei",
   "license": "MIT",

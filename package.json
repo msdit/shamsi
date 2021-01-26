@@ -1,6 +1,6 @@
 {
   "name": "shamsi",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Jalali to Gregorian converter with no dependency",
   "main": "index.js",
   "scripts": {

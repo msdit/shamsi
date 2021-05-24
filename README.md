@@ -17,7 +17,7 @@ A Jalali to Gregorian and Gregorian to Jalali converter with no dependency!
   - [Es5](#es5)
   - [Jquery](#jquery)
 - [Using `Date`](#using-date)
-- [format output](#format-output)
+- [Format date](#format-date)
 
 This plugin convert jalali to gregorian and gregorian to jalali in the most simple way
 
@@ -95,12 +95,32 @@ get library using bower, npm, cdn, or cloning the repository
 
 ## Using `Date`
 
-get library using bower, npm, cdn, or cloning the repository
+#### [shamsi-date-converter](https://www.npmjs.com/package/shamsi-date-converter)
 
-```HTML
-<script src="https://unpkg.com/shamsi"></script>
+If you want to pass date as input like:
 
-<script>
-  $("#date").text(shamsi.gregorianToJalali(1989, 1, 24).join('/'));
-</script>
+```js
+var date1 = new Date("December 17, 1995 03:24:00");
+// OR
+var date2 = new Date("1995-12-17T03:24:00");
+// OR sth else
+
+gregorianToJalali(date1);
 ```
+
+you have to use [shamsi-date-converter](https://www.npmjs.com/package/shamsi-date-converter)
+
+## Format date
+
+#### [shamsi-formatter](https://www.npmjs.com/package/shamsi-formatter)
+
+If you want to pass formatted date as input or get formatted date from output like:
+
+```js
+gregorianToJalali("1995/7/17"); // => 1374/4/26
+// OR
+jalaliToGregorian("1374/4/26"); // => 1995/7/17
+// OR other formats as input or outputs
+```
+
+you have to use [shamsi-formatter](https://www.npmjs.com/package/shamsi-formatter)

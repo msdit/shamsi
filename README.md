@@ -1,11 +1,12 @@
 # Shamsi
 
-A Jalali to Gregorian converter with no dependency!
+A Jalali to Gregorian and Gregorian to Jalali converter with no dependency!
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![NPM version](https://img.shields.io/npm/v/shamsi.svg?style=flat)](https://npmjs.org/package/shamsi)
-[![Package Quality](https://npm.packagequality.com/shield/shamsi.svg)](https://packagequality.com/#?package=shamsi)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e7b808bc8c424d35afd33717776f1ad8)](https://www.codacy.com/gh/msdit/shamsi/dashboard?utm_source=github.com&utm_medium=referral&utm_content=msdit/shamsi&utm_campaign=Badge_Grade)
+
+<!-- [![Package Quality](https://npm.packagequality.com/shield/shamsi.svg)](https://packagequality.com/#?package=shamsi) -->
 
 ## How to
 
@@ -15,6 +16,8 @@ A Jalali to Gregorian converter with no dependency!
   - [React](#react)
   - [Es5](#es5)
   - [Jquery](#jquery)
+- [Using `Date`](#using-date)
+- [format output](#format-output)
 
 This plugin convert jalali to gregorian and gregorian to jalali in the most simple way
 
@@ -79,6 +82,18 @@ render() {
 ```
 
 #### Jquery
+
+get library using bower, npm, cdn, or cloning the repository
+
+```HTML
+<script src="https://unpkg.com/shamsi"></script>
+
+<script>
+  $("#date").text(shamsi.gregorianToJalali(1989, 1, 24).join('/'));
+</script>
+```
+
+## Using `Date`
 
 get library using bower, npm, cdn, or cloning the repository
 

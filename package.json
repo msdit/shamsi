@@ -1,7 +1,7 @@
 {
   "name": "shamsi",
   "version": "0.1.5",
-  "description": "A Jalali to Gregorian converter with no dependency",
+  "description": "A Jalali to Gregorian and Gregorian to Jalali converter with no dependency",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,23 +13,17 @@
   "keywords": [
     "jalaali",
     "jalali",
+    "jalali-date",
     "miladi",
     "convert",
     "persian",
+    "persian-date",
     "khorshidi",
     "shamsi",
+    "shamsi-date",
     "calendar",
     "date",
-    "time",
-    "javascript",
-    "react",
-    "reactjs",
-    "react_native",
-    "reactnative",
-    "node.js",
-    "jQuery",
-    "vue",
-    "angular"
+    "time"
   ],
   "author": "Masoud Aghaei",
   "license": "MIT",

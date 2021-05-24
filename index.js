@@ -1,8 +1,6 @@
-/** 355746=361590-5844 & 361590=(30*33*365)+(30*8) & 5844=(16*365)+(16/4)
-355666=355746-79-1 & 355668=355746-79+1 &  1595=605+990 &  605=621-16
-990=30*33 & 12053=(365*33)+(32/4) & 36524=(365*100)+(100/4)-(100/100)
-1461=(365*4)+(4/4) & 146097=(365*400)+(400/4)-(400/100)+(400/400)  */
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.jalaliToGregorian = exports.gregorianToJalali = void 0;
 function gregorianToJalali(gy, gm, gd) {
   var gdm, jy, jm, jd, gy2, days;
   gdm = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
@@ -33,7 +31,6 @@ function gregorianToJalali(gy, gm, gd) {
   return [jy, jm, jd];
 }
 exports.gregorianToJalali = gregorianToJalali;
-
 function jalaliToGregorian(jy, jm, jd) {
   var salA, gy, gm, gd, days;
   jy += 1595;

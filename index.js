@@ -73,7 +73,7 @@ function jalaliToGregorian(jy, jm, jd) {
     31,
   ];
   for (gm = 0; gm < 13 && gd > salA[gm]; gm++) {
-    gd -= salA[gm];
+    gd -= salA[parseInt(gm)];
   }
   return [gy, gm, gd];
 }

@@ -52,7 +52,7 @@ yarn add shamsi
 Install it via npm or yarn then use it as the following code
 
 ```js
-var shamsi = require("jalali-moment");
+var shamsi = require("shamsi");
 shamsi.gregorianToJalali(1989, 1, 24);
 ```
 

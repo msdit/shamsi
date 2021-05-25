@@ -32,7 +32,7 @@ function gregorianToJalali(gy, gm, gd) {
 }
 exports.gregorianToJalali = gregorianToJalali;
 function jalaliToGregorian(jy, jm, jd) {
-  var gy, gd, days;
+  var salA, gy, gm, gd, days;
   jy += 1595;
   days =
     -355668 +
@@ -57,7 +57,7 @@ function jalaliToGregorian(jy, jm, jd) {
     days = (days - 1) % 365;
   }
   gd = days + 1;
-  var salA = [
+  salA = [
     0,
     31,
     (gy % 4 === 0 && gy % 100 !== 0) || gy % 400 === 0 ? 29 : 28,
@@ -72,7 +72,7 @@ function jalaliToGregorian(jy, jm, jd) {
     30,
     31,
   ];
-  for (var gm = 0; gm < 13 && gd > salA[parseInt(gm, 10)]; gm++) {
+  for (gm = 0; gm < 13 && gd > salA[parseInt(gm, 10)]; gm++) {
     gd -= salA[parseInt(gm, 10)];
   }
   return [gy, gm, gd];
